@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://signalpoint.in/sitemap.xml

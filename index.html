@@ -1,0 +1,246 @@
+<meta name="description" content="We asked Google 44 real buying questions about Indian skincare and supplements and recorded every brand its AI Overview named. 44 of 79 brands were never mentioned.">
+<meta property="og:title" content="Who Google's AI recommends for Indian skincare and supplements">
+<meta property="og:description" content="44 buying questions. 79 brands tracked. 44 never named once.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://signalpoint.in/">
+<meta name="twitter:card" content="summary_large_image">
+<title>Who Google's AI Recommends</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+  :root{
+    --ink:#141917; --ink-2:#3d4744; --ink-3:#6b7a75;
+    --ground:#f6f4ef; --panel:#fffefb; --line:#ded9cf; --line-soft:#ebe6dd;
+    --accent:#0f6b5c; --accent-soft:#dcece8; --warn:#8a4d10; --warn-soft:#fbf0e2;
+    --shadow:0 1px 2px rgba(20,25,23,.05), 0 10px 30px -20px rgba(20,25,23,.35);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#eceae4; --ink-2:#b3bcb8; --ink-3:#7d8a86;
+      --ground:#10130f; --panel:#171b18; --line:#2c332f; --line-soft:#232823;
+      --accent:#5fc8b0; --accent-soft:#16302b; --warn:#d79b52; --warn-soft:#2f2415;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -20px rgba(0,0,0,.9);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#eceae4; --ink-2:#b3bcb8; --ink-3:#7d8a86;
+    --ground:#10130f; --panel:#171b18; --line:#2c332f; --line-soft:#232823;
+    --accent:#5fc8b0; --accent-soft:#16302b; --warn:#d79b52; --warn-soft:#2f2415;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -20px rgba(0,0,0,.9);
+  }
+  *{box-sizing:border-box}
+  body{background:var(--ground); color:var(--ink);
+    font-family:"Public Sans",ui-sans-serif,system-ui,sans-serif; font-size:16.5px;
+    line-height:1.65; -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:760px; margin:0 auto; padding:52px 24px 100px;}
+  a{color:var(--accent);}
+
+  .eyebrow{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--accent); font-weight:700; margin:0 0 20px;}
+  h1{font-family:"Fraunces",Georgia,serif; font-size:clamp(36px,6.4vw,58px); line-height:1.02;
+    font-weight:600; letter-spacing:-.02em; margin:0 0 20px; text-wrap:balance;}
+  .standfirst{font-size:20px; line-height:1.55; color:var(--ink-2); margin:0 0 26px;}
+  .byline{display:flex; gap:22px; flex-wrap:wrap; padding:16px 0; margin-bottom:8px;
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    font-family:"JetBrains Mono",monospace; font-size:12px; color:var(--ink-3);}
+  .byline b{color:var(--ink); font-weight:500;}
+
+  section{margin-top:52px;}
+  h2{font-family:"Fraunces",Georgia,serif; font-size:28px; font-weight:600;
+    letter-spacing:-.012em; margin:0 0 14px; text-wrap:balance;}
+  h3{font-size:14px; font-family:"JetBrains Mono",monospace; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--ink-3); font-weight:500; margin:34px 0 12px;}
+  p{margin:0 0 17px; max-width:66ch;}
+  strong{font-weight:700;}
+
+  .bignum{background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--accent);
+    border-radius:3px; padding:26px 30px; margin:26px 0; box-shadow:var(--shadow);}
+  .bignum .fig{font-family:"Fraunces",Georgia,serif; font-size:clamp(40px,8vw,62px);
+    font-weight:700; color:var(--accent); line-height:1; letter-spacing:-.02em;}
+  .bignum .cap{font-size:17px; color:var(--ink-2); margin-top:10px; max-width:52ch;}
+
+  .tw{border:1px solid var(--line); border-radius:3px; background:var(--panel); overflow-x:auto;}
+  table{border-collapse:collapse; width:100%; font-size:15px;}
+  th,td{padding:10px 14px; text-align:left; border-bottom:1px solid var(--line-soft);}
+  tbody tr:last-child td{border-bottom:none;}
+  th{font-family:"JetBrains Mono",monospace; font-size:10.5px; letter-spacing:.11em;
+    text-transform:uppercase; color:var(--ink-3); font-weight:500; border-bottom:1px solid var(--line);}
+  td.b{font-weight:600; white-space:nowrap;}
+  td.n{font-family:"JetBrains Mono",monospace; font-variant-numeric:tabular-nums;
+    text-align:right; white-space:nowrap;}
+  td.pct{color:var(--accent); font-weight:700;}
+  td.mono{font-family:"JetBrains Mono",monospace; font-size:13px;}
+  .barcell{width:44%; min-width:110px;}
+  .bar{background:var(--line-soft); border-radius:2px; height:9px; overflow:hidden;}
+  .bar i{display:block; height:100%; background:var(--accent);}
+  .gl{font-family:"JetBrains Mono",monospace; font-size:9.5px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--ink-3); border:1px solid var(--line);
+    padding:1px 5px; border-radius:2px; margin-left:7px; font-weight:500;}
+  .own{font-family:"JetBrains Mono",monospace; font-size:10px; color:var(--accent);
+    background:var(--accent-soft); padding:2px 6px; border-radius:2px; margin-left:8px;}
+
+  .callout{background:var(--accent-soft); border:1px solid var(--line); border-radius:3px;
+    padding:20px 24px; margin:24px 0; font-size:16.5px;}
+  .callout.warn{background:var(--warn-soft);}
+  blockquote{margin:24px 0; padding:0 0 0 22px; border-left:3px solid var(--accent);
+    font-family:"Fraunces",Georgia,serif; font-size:21px; line-height:1.45; color:var(--ink);}
+
+  .method{background:var(--panel); border:1px solid var(--line); border-radius:3px;
+    padding:22px 26px; font-size:15px; color:var(--ink-2);}
+  .method ul{margin:0; padding-left:20px;}
+  .method li{margin-bottom:9px;}
+  .method b{color:var(--ink);}
+
+  .cta{background:var(--panel); border:2px solid var(--accent); border-radius:3px;
+    padding:30px 32px; margin-top:44px; box-shadow:var(--shadow);}
+  .cta h2{margin-bottom:10px;}
+  .cta .price{font-family:"JetBrains Mono",monospace; font-size:15px; color:var(--accent);
+    font-weight:700; margin:16px 0 8px;}
+  .cta a.btn{display:inline-block; background:var(--accent); color:var(--panel);
+    padding:12px 22px; border-radius:3px; font-weight:700; text-decoration:none;
+    margin-top:12px; font-size:15.5px;}
+
+  footer{margin-top:56px; padding-top:22px; border-top:1px solid var(--line);
+    font-size:13.5px; color:var(--ink-3);}
+</style>
+
+<div class="wrap">
+
+  <p class="eyebrow">Signalpoint · Research</p>
+  <h1>Who Google's AI recommends when Indians shop for skincare and supplements</h1>
+  <p class="standfirst">We asked Google 44 real buying questions and recorded every brand
+  its AI Overview named. A handful of brands are recommended relentlessly. Most are never
+  mentioned at all — including some of the largest names in the country.</p>
+
+  <div class="byline">
+    <span>Published <b>16 September 2026</b></span>
+    <span><b>44</b> questions</span>
+    <span><b>79</b> brands tracked</span>
+    <span>India · Google AI Overviews</span>
+  </div>
+
+  <section>
+    <p>When someone searches for skincare or supplements now, Google increasingly answers the
+    question itself — an AI Overview above the results, naming specific products. For a shopper
+    that is convenient. For a brand it is a new shelf, and nobody has published who is on it.</p>
+
+    <p>So we measured it. 44 buying questions, run through Google in India, every named
+    brand recorded. The findings are reproducible: search any question below and count for yourself.</p>
+
+    <div class="bignum">
+      <div class="fig">44</div>
+      <div class="cap">of the 79 brands we tracked were named in <strong>zero</strong>
+      answers — not once across 44 questions.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skincare: one brand answers almost everything</h2>
+    <p>Across 23 skincare questions, <strong>Minimalist was named in
+    19 of them — 83%</strong>. No other brand comes close, and
+    26 of the 44 skincare brands we tracked never appeared at all.</p>
+    <div class="tw"><table>
+      <thead><tr><th>Brand</th><th style="text-align:right">Named in</th><th></th>
+        <th style="text-align:right">Share</th></tr></thead>
+      <tbody><tr><td class='b'>Minimalist</td><td class='n'>19/23</td><td class='barcell'><div class='bar'><i style='width:83%'></i></div></td><td class='n pct'>83%</td></tr><tr><td class='b'>The Derma Co</td><td class='n'>13/23</td><td class='barcell'><div class='bar'><i style='width:57%'></i></div></td><td class='n pct'>57%</td></tr><tr><td class='b'>Plum</td><td class='n'>10/23</td><td class='barcell'><div class='bar'><i style='width:43%'></i></div></td><td class='n pct'>43%</td></tr><tr><td class='b'>The Ordinary<span class='gl'>global</span></td><td class='n'>5/23</td><td class='barcell'><div class='bar'><i style='width:22%'></i></div></td><td class='n pct'>22%</td></tr><tr><td class='b'>Deconstruct</td><td class='n'>4/23</td><td class='barcell'><div class='bar'><i style='width:17%'></i></div></td><td class='n pct'>17%</td></tr><tr><td class='b'>Dr. Sheth&#x27;s</td><td class='n'>4/23</td><td class='barcell'><div class='bar'><i style='width:17%'></i></div></td><td class='n pct'>17%</td></tr><tr><td class='b'>Dot &amp; Key</td><td class='n'>4/23</td><td class='barcell'><div class='bar'><i style='width:17%'></i></div></td><td class='n pct'>17%</td></tr><tr><td class='b'>Simple<span class='gl'>global</span></td><td class='n'>3/23</td><td class='barcell'><div class='bar'><i style='width:13%'></i></div></td><td class='n pct'>13%</td></tr><tr><td class='b'>Pilgrim</td><td class='n'>2/23</td><td class='barcell'><div class='bar'><i style='width:9%'></i></div></td><td class='n pct'>9%</td></tr><tr><td class='b'>Re&#x27;Equil</td><td class='n'>2/23</td><td class='barcell'><div class='bar'><i style='width:9%'></i></div></td><td class='n pct'>9%</td></tr><tr><td class='b'>Foxtale</td><td class='n'>2/23</td><td class='barcell'><div class='bar'><i style='width:9%'></i></div></td><td class='n pct'>9%</td></tr><tr><td class='b'>Cetaphil<span class='gl'>global</span></td><td class='n'>2/23</td><td class='barcell'><div class='bar'><i style='width:9%'></i></div></td><td class='n pct'>9%</td></tr></tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Supplements: more open, but still concentrated</h2>
+    <p><strong>MuscleBlaze led with 9 of 21 (43%)</strong>.
+    18 of 35 tracked supplement brands were never named.</p>
+    <div class="tw"><table>
+      <thead><tr><th>Brand</th><th style="text-align:right">Named in</th><th></th>
+        <th style="text-align:right">Share</th></tr></thead>
+      <tbody><tr><td class='b'>MuscleBlaze</td><td class='n'>9/21</td><td class='barcell'><div class='bar'><i style='width:43%'></i></div></td><td class='n pct'>43%</td></tr><tr><td class='b'>Carbamide Forte</td><td class='n'>6/21</td><td class='barcell'><div class='bar'><i style='width:29%'></i></div></td><td class='n pct'>29%</td></tr><tr><td class='b'>Optimum Nutrition<span class='gl'>global</span></td><td class='n'>5/21</td><td class='barcell'><div class='bar'><i style='width:24%'></i></div></td><td class='n pct'>24%</td></tr><tr><td class='b'>Nakpro</td><td class='n'>4/21</td><td class='barcell'><div class='bar'><i style='width:19%'></i></div></td><td class='n pct'>19%</td></tr><tr><td class='b'>GNC<span class='gl'>global</span></td><td class='n'>3/21</td><td class='barcell'><div class='bar'><i style='width:14%'></i></div></td><td class='n pct'>14%</td></tr><tr><td class='b'>Wellbeing Nutrition</td><td class='n'>3/21</td><td class='barcell'><div class='bar'><i style='width:14%'></i></div></td><td class='n pct'>14%</td></tr><tr><td class='b'>AS-IT-IS Nutrition</td><td class='n'>2/21</td><td class='barcell'><div class='bar'><i style='width:10%'></i></div></td><td class='n pct'>10%</td></tr><tr><td class='b'>Fast&amp;Up</td><td class='n'>2/21</td><td class='barcell'><div class='bar'><i style='width:10%'></i></div></td><td class='n pct'>10%</td></tr><tr><td class='b'>OZiva</td><td class='n'>2/21</td><td class='barcell'><div class='bar'><i style='width:10%'></i></div></td><td class='n pct'>10%</td></tr><tr><td class='b'>Dymatize<span class='gl'>global</span></td><td class='n'>2/21</td><td class='barcell'><div class='bar'><i style='width:10%'></i></div></td><td class='n pct'>10%</td></tr><tr><td class='b'>Avvatar</td><td class='n'>1/21</td><td class='barcell'><div class='bar'><i style='width:5%'></i></div></td><td class='n pct'>5%</td></tr><tr><td class='b'>MyProtein<span class='gl'>global</span></td><td class='n'>1/21</td><td class='barcell'><div class='bar'><i style='width:5%'></i></div></td><td class='n pct'>5%</td></tr></tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>The thing everyone assumes, which our data does not support</h2>
+    <p>Every AI Overview cites its sources. The prevailing advice — sold by AEO and GEO agencies
+    at ₹25,000 to ₹3,50,000 a month — is that you publish content, Google cites your site, and
+    Google then recommends you.</p>
+
+    <p>We expected to confirm that. We could not.</p>
+
+    <div class="tw"><table>
+      <thead><tr><th>Brand</th><th>Own domain</th><th style="text-align:right">Cited</th>
+        <th style="text-align:right">Recommended in</th></tr></thead>
+      <tbody><tr><td class='b'>Plum</td><td class='mono'>plumgoodness.com</td><td class='n'>12x</td><td class='n'>10/23</td></tr><tr><td class='b'>Deconstruct</td><td class='mono'>thedeconstruct.in</td><td class='n'>8x</td><td class='n'>4/23</td></tr><tr><td class='b'>The Derma Co</td><td class='mono'>thedermaco.com</td><td class='n'>5x</td><td class='n'>13/23</td></tr><tr><td class='b'>Pilgrim</td><td class='mono'>discoverpilgrim.com</td><td class='n'>4x</td><td class='n'>2/23</td></tr><tr><td class='b'>Wellbeing Nutrition</td><td class='mono'>wellbeingnutrition.com</td><td class='n'>9x</td><td class='n'>3/21</td></tr><tr><td class='b'>Nutrabay</td><td class='mono'>nutrabay.com</td><td class='n'>7x</td><td class='n'>1/21</td></tr><tr><td class='b'>HealthyHey</td><td class='mono'>healthyhey.com</td><td class='n'>5x</td><td class='n'>0/21</td></tr></tbody>
+    </table></div>
+
+    <blockquote>Being cited as a source and being recommended as a product are close to
+    independent. The most-recommended skincare brand in our scan had its own site cited once.
+    One supplement brand was cited five times and recommended zero times.</blockquote>
+
+    <div class="callout warn"><strong>We are not claiming the opposite either.</strong> We ran
+    44 questions on one day, on one surface. That is enough to say the simple story does
+    not hold in this data. It is not enough to say what does drive a recommendation — and we would
+    rather tell you that than sell you a theory.</div>
+
+    <p>What the numbers do support is narrower and, we think, more useful: a small number of brands
+    are recommended relentlessly, most are never mentioned, and almost no brand in either category
+    appears to know which group it is in.</p>
+
+    <h3>Skincare — most cited sources</h3>
+    <div class="tw"><table>
+      <thead><tr><th>Domain</th><th style="text-align:right">Citations</th></tr></thead>
+      <tbody><tr><td class='mono'>google.com</td><td class='n'>39</td></tr><tr><td class='mono'>youtube.com</td><td class='n'>21</td></tr><tr><td class='mono'>amazon.in</td><td class='n'>15</td></tr><tr><td class='mono'>plumgoodness.com<span class='own'>Plum's own site</span></td><td class='n'>12</td></tr><tr><td class='mono'>thedeconstruct.in<span class='own'>Deconstruct's own site</span></td><td class='n'>8</td></tr><tr><td class='mono'>nykaa.com</td><td class='n'>8</td></tr><tr><td class='mono'>reddit.com</td><td class='n'>7</td></tr><tr><td class='mono'>flipkart.com</td><td class='n'>6</td></tr><tr><td class='mono'>thedermaco.com<span class='own'>The Derma Co's own site</span></td><td class='n'>5</td></tr><tr><td class='mono'>instagram.com</td><td class='n'>4</td></tr></tbody>
+    </table></div>
+
+    <h3>Supplements — most cited sources</h3>
+    <div class="tw"><table>
+      <thead><tr><th>Domain</th><th style="text-align:right">Citations</th></tr></thead>
+      <tbody><tr><td class='mono'>amazon.in</td><td class='n'>37</td></tr><tr><td class='mono'>healthkart.com</td><td class='n'>21</td></tr><tr><td class='mono'>1mg.com</td><td class='n'>15</td></tr><tr><td class='mono'>youtube.com</td><td class='n'>15</td></tr><tr><td class='mono'>wellbeingnutrition.com<span class='own'>Wellbeing Nutrition's own site</span></td><td class='n'>9</td></tr><tr><td class='mono'>nutrabay.com<span class='own'>Nutrabay's own site</span></td><td class='n'>7</td></tr><tr><td class='mono'>instagram.com</td><td class='n'>7</td></tr><tr><td class='mono'>reddit.com</td><td class='n'>5</td></tr><tr><td class='mono'>guardian.in</td><td class='n'>5</td></tr><tr><td class='mono'>healthyhey.com<span class='own'>HealthyHey's own site</span></td><td class='n'>5</td></tr></tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>What we are not saying</h2>
+    <div class="method">
+      <ul>
+        <li><b>This is one surface, on one day.</b> Google AI Overviews change. A brand absent
+        today may appear next month, and the reverse.</li>
+        <li><b>Not being named is not the same as not selling.</b> Several invisible brands are
+        large and successful. This measures one channel, not a business.</li>
+        <li><b>Answers vary.</b> AI Overviews are not deterministic and differ by user and
+        session. We ran each question once; treat single results as indicative.</li>
+        <li><b>Correlation, not proof.</b> Cited brands tend to have their own sites cited. We
+        have not proven that publishing content causes the recommendation.</li>
+        <li><b>We have not named the invisible brands.</b> If you want to know whether yours is
+        among them, we will tell you privately.</li>
+      </ul>
+    </div>
+    <h3>Method</h3>
+    <div class="method">
+      <ul>
+        <li>44 buying questions, weighted toward "best X for Y" phrasing, which is what
+        triggers product recommendations. Advice questions rarely name any brand.</li>
+        <li>Run through Google with India as the region, AI Overview captured in full including
+        the shopping carousel, sources recorded.</li>
+        <li>Brands matched on exact name with word boundaries. Every answer archived.</li>
+        <li>79 brands tracked across both categories.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h2>Is your brand on the invisible list?</h2>
+    <p>We will run your brand against every buying question in your category, show you exactly
+    which competitors Google recommends instead of you, and give you the full archived answers so
+    you can verify every line.</p>
+    <p style="font-size:15px;color:var(--ink-3)">What we will not do is promise to fix it. We have
+    not established what causes a recommendation, and anyone who tells you they have should be
+    asked for their data.</p>
+    <p class="price">₹15,000 · delivered in 72 hours · founding price, first 10 brands</p>
+    <a class="btn" href="mailto:hardik@signalpoint.in?subject=AI%20visibility%20report">Request your report</a>
+  </div>
+
+  <footer>
+    <strong>Signalpoint</strong> — we measure what AI systems say about Indian consumer brands.
+    Two people, started 2026. Every figure here is reproducible: run the question yourself and count.
+    Questions or corrections: hardik@signalpoint.in
+  </footer>
+
+</div>
