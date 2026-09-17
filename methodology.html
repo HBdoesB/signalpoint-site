@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology — Signalpoint</title>
+<meta name="description" content="How Signalpoint measures AI visibility: question selection, capture protocol, brand matching, what we archive, and what the method cannot tell you.">
+<meta property="og:title" content="Signalpoint Methodology">
+<meta property="og:description" content="How we measure AI visibility, and what the method cannot tell you.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://signalpoint.in/methodology.html">
+<link rel="canonical" href="https://signalpoint.in/methodology.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<meta name="theme-color" content="#0f6b5c">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="/shared.css">
+<style>
+  .doc{max-width:760px;margin:0 auto;padding:48px 26px 90px}
+  .doc h1{font-size:clamp(32px,5vw,46px);margin:0 0 16px}
+  .doc h2{font-size:25px;margin:48px 0 12px;padding-top:26px;border-top:1px solid var(--line)}
+  .doc h2:first-of-type{border-top:none;padding-top:0;margin-top:34px}
+  .doc h3{font-size:17px;margin:26px 0 8px}
+  .ver{display:flex;gap:22px;flex-wrap:wrap;padding:14px 0;margin:0 0 8px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-size:13px;color:var(--ink-3)}
+  .ver b{color:var(--ink);font-weight:600}
+  .doc ul{padding-left:20px;max-width:68ch}
+  .doc li{margin-bottom:9px;color:var(--ink-2)}
+  .limits{background:var(--warm-soft);border:1px solid color-mix(in srgb,var(--warm) 30%,transparent);
+    border-radius:6px;padding:22px 26px;margin:22px 0}
+  .limits h3{margin-top:0}
+  .limits li{color:var(--ink)}
+  .chg td{font-size:14px}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="/">
+      <svg class="mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="2.6" fill="currentColor"/>
+        <circle cx="12" cy="12" r="6.4" stroke="currentColor" stroke-width="1.5" opacity=".55"/>
+        <circle cx="12" cy="12" r="10.4" stroke="currentColor" stroke-width="1.5" opacity=".25"/>
+      </svg>
+      Signalpoint
+    </a>
+    <nav class="nav-links">
+      <a href="/#what">What we do</a>
+      <a href="/study.html">Research</a>
+      <a href="/methodology.html">Method</a>
+      <a href="/#pricing">Pricing</a>
+      <a class="btn" href="/#pricing">Get your report</a>
+    </nav>
+  </div>
+</header>
+
+<div class="doc">
+  <p class="eyebrow">Signalpoint</p>
+  <h1>How we measure AI visibility</h1>
+  <p class="lede">Every report and every study we publish follows this protocol. If a number of ours
+  ever looks wrong, this page is where you check our working.</p>
+
+  <div class="ver">
+    <span>Version <b>1.0</b></span>
+    <span>Effective <b>17 September 2026</b></span>
+    <span>Applies to <b>Google AI Overviews, India</b></span>
+  </div>
+
+  <h2>1. What we are actually measuring</h2>
+  <p>When someone searches a buying question, Google often writes an answer above the results and
+  names specific products inside it. We measure one thing: <strong>whether a given brand is named
+  in that answer, and how often, across a set of buying questions for its category.</strong></p>
+  <p>We are not measuring search rankings, traffic, or sales. A brand can rank first on Google and
+  never appear in the answer above it. That gap is the whole reason this measurement exists.</p>
+
+  <h2>2. How questions are chosen</h2>
+  <p>Each category gets 25–30 questions, selected against four rules:</p>
+  <ul>
+    <li><strong>Buying intent, not research intent.</strong> The phrasing a person uses when
+      deciding what to purchase.</li>
+    <li><strong>Weighted toward recommendation questions.</strong> We measured this: "best X for Y"
+      phrasing triggers a product answer naming several brands, while advice phrasing
+      ("can I use X with Y") usually names nobody. Roughly 85% of each set is recommendation
+      phrasing, because that is where visibility exists at all.</li>
+    <li><strong>Long-tail over head terms.</strong> Head terms are decided by large publisher
+      listicles and are not realistically winnable. Specific questions are.</li>
+    <li><strong>A minority of advice questions are kept deliberately</strong> — they are where
+      nobody is named, which makes them the clearest openings for a brand to claim.</li>
+  </ul>
+  <p>The full question set is published with every study and included in every client report. We do
+  not keep the questions private.</p>
+
+  <h2>3. How answers are captured</h2>
+  <ul>
+    <li>Queries are run against Google with India set as the region.</li>
+    <li>The AI Overview is captured in full, including the product carousel. Brand names frequently
+      appear only inside carousel entries — reading the prose alone under-reports visibility, and
+      we verified this changes results materially.</li>
+    <li>Where Google defers the answer behind a token, we follow it and capture the expanded
+      version rather than recording an empty result.</li>
+    <li>Every captured answer is archived with its timestamp and its full source list.</li>
+    <li>Queries that return no AI Overview are recorded as such, not silently dropped.</li>
+  </ul>
+
+  <h2>4. How brands are matched</h2>
+  <p>Brand names are matched on the full name with word boundaries, tolerant of spacing and
+  ampersands, so "Dot &amp; Key" and "Dot and Key" both match and "Plum" does not match
+  "plumping". Matching is case-insensitive and applied to the whole captured answer.</p>
+  <p>We also record every brand-like entity in the answer that is <em>not</em> on the tracked list.
+  This is how competitors nobody was watching get found, and it is included in client reports.</p>
+
+  <h2>5. What we archive</h2>
+  <p>For every question: the full answer text, every cited source URL, every brand named, the
+  capture timestamp, and whether an AI Overview appeared at all. Clients receive this as CSV. For
+  published studies it is downloadable by anyone, with no email required.</p>
+
+  <h2>6. What this method cannot tell you</h2>
+  <div class="limits">
+    <h3>Stated plainly, because it matters</h3>
+    <ul>
+      <li><strong>AI answers are not deterministic.</strong> The same question can return a
+        different answer to a different person, or to the same person later. Single results are
+        indicative. Patterns across a set of questions are the reliable unit.</li>
+      <li><strong>This is one surface on one date.</strong> Google AI Overviews change. A brand
+        absent today may appear next month, and the reverse.</li>
+      <li><strong>Not being named is not the same as not selling.</strong> Several brands we found
+        invisible are large and successful. This measures one channel.</li>
+      <li><strong>We have not established what causes a recommendation.</strong> We have measured
+        which things differ between recommended and invisible brands — product title convention
+        most clearly. That is correlation with known exceptions, not a mechanism. Anyone claiming a
+        reliable cause should be asked for their data.</li>
+      <li><strong>Our samples are small enough to be checked.</strong> Which is the point. Every
+        figure we publish carries the number of observations behind it.</li>
+    </ul>
+  </div>
+
+  <h2>7. Version history</h2>
+  <div class="tw"><table class="chg">
+    <thead><tr><th>Version</th><th>Date</th><th>Change</th></tr></thead>
+    <tbody>
+      <tr><td class="n">1.0</td><td class="n">17 Sep 2026</td>
+          <td>First published. Covers Google AI Overviews in India across beauty, personal care
+              and nutrition.</td></tr>
+    </tbody>
+  </table></div>
+  <p class="sm muted" style="margin-top:14px">When this method changes, the version number changes
+  and the change is recorded here. Reports state the method version they were produced under.</p>
+
+  <h2>Questions about the method</h2>
+  <p>If something here is unclear or you think a step is wrong, write to
+  <a href="mailto:hardik@signalpoint.in">hardik@signalpoint.in</a>. Corrections get published.</p>
+</div>
+
+<footer>
+  <div class="foot">
+    <div>
+      <a class="brand" href="/" style="margin-bottom:12px">
+        <svg class="mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="2.6" fill="currentColor"/>
+          <circle cx="12" cy="12" r="6.4" stroke="currentColor" stroke-width="1.5" opacity=".55"/>
+          <circle cx="12" cy="12" r="10.4" stroke="currentColor" stroke-width="1.5" opacity=".25"/>
+        </svg>
+        Signalpoint
+      </a>
+      <p class="sm muted" style="max-width:34ch">We measure what AI systems say about Indian
+        consumer brands.</p>
+    </div>
+    <div>
+      <h4>Site</h4>
+      <a href="/#what">What we do</a>
+      <a href="/study.html">Research</a>
+      <a href="/methodology.html">Method</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#faq">FAQ</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="mailto:hardik@signalpoint.in">hardik@signalpoint.in</a>
+      <p class="addr">New Delhi, India</p>
+    </div>
+  </div>
+  <div class="legal">
+    <span>© 2026 Signalpoint. All measurements from public data.</span>
+    <span>Not registered under GST</span>
+  </div>
+</footer>
+
+</body>
+</html>
