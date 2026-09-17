@@ -1,47 +1,47 @@
 :root{
-  /* Palette rebuilt 17 Sep 2026. The previous one — warm cream ground #fbfaf7
-     with a muted green accent #0f6b5c — is now the documented default look of
-     AI-generated design in 2026. Cream + sage is the tell, not the fonts.
-     This is cool paper, a real grey ramp, and ONE unreasonable colour used
-     heavily rather than sparingly (the Roots of Progress / Pentagram move).
-     Buttons take the ink fill, not the signal fill, so contrast is never
-     marginal. */
-  --g-050:#F4F4F1; --g-100:#EAEAE5; --g-200:#DCDCD6; --g-300:#C4C4BD;
-  --g-400:#9B9B94; --g-500:#7C8087; --g-600:#5A5D63; --g-700:#3C3F45;
-  --g-800:#26282C; --g-900:#16171A;
+  /* Palette v3 — 17 Sep 2026. Light, institutional, near-monochrome navy.
+     v1 was cream + muted sage, which is the documented 2026 AI-generated
+     default. v2 used a signal red heavily; it read urgent rather than
+     trustworthy. This is the research-house register (cf. Our World in Data's
+     navy): one deep blue family doing ink, link and data duty, on cool paper
+     with a blue-biased grey ramp. Buttons take the ink fill so contrast is
+     never marginal. */
+  --g-050:#F7F8FA; --g-100:#EDEFF3; --g-200:#DCE0E8; --g-300:#C2C9D6;
+  --g-400:#9AA3B5; --g-500:#6B778C; --g-600:#515D74; --g-700:#3E4A61;
+  --g-800:#27324A; --g-900:#17202F;
 
   --ink:var(--g-900); --ink-2:var(--g-700); --ink-3:var(--g-500);
   --ground:var(--g-050); --panel:var(--g-100);
   --line:var(--g-200); --line-soft:var(--g-100);
 
-  /* the signal: one colour, used a lot. it means "named in the answer". */
-  --accent:#C9331A; --accent-2:#A5250F; --accent-soft:#F7E2DD;
-  --warm:#8a4d10; --warm-soft:#F2EDE4;
+  /* one blue, used for every link, every emphasis and every data mark */
+  --accent:#1F4F8F; --accent-2:#163C6E; --accent-soft:#E4EBF5;
+  --warm:#8A5A1B; --warm-soft:#F4EFE6;
 
   --btn-bg:var(--ink); --btn-ink:var(--g-050);
-  --shadow-sm:0 1px 2px rgba(22,23,26,.05);
-  --shadow:0 1px 2px rgba(22,23,26,.05), 0 10px 26px -18px rgba(22,23,26,.35);
+  --shadow-sm:0 1px 2px rgba(23,32,47,.06);
+  --shadow:0 1px 2px rgba(23,32,47,.06), 0 10px 26px -18px rgba(23,32,47,.35);
   --max:1080px;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --g-050:#131416; --g-100:#1B1D20; --g-200:#2A2D31; --g-300:#3C4046;
-    --g-400:#5B6067; --g-500:#868B92; --g-600:#A6ABB1; --g-700:#C3C7CB;
-    --g-800:#DFE1E3; --g-900:#EDEDEA;
-    --accent:#FF6A4D; --accent-2:#FF8569; --accent-soft:#33170F;
-    --warm:#d79b52; --warm-soft:#2A2318;
-    --btn-bg:var(--g-900); --btn-ink:#131416;
+    --g-050:#10141C; --g-100:#171D28; --g-200:#252D3C; --g-300:#35405380;
+    --g-300:#354053; --g-400:#525E75; --g-500:#8290A8; --g-600:#A5B1C4;
+    --g-700:#C3CBD8; --g-800:#DDE3EB; --g-900:#E9EDF3;
+    --accent:#7FB0EC; --accent-2:#9CC5F4; --accent-soft:#16253C;
+    --warm:#D2A264; --warm-soft:#261E12;
+    --btn-bg:var(--g-900); --btn-ink:#10141C;
     --shadow-sm:0 1px 2px rgba(0,0,0,.5);
     --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 26px -18px rgba(0,0,0,.9);
   }
 }
 :root[data-theme="dark"]{
-  --g-050:#131416; --g-100:#1B1D20; --g-200:#2A2D31; --g-300:#3C4046;
-  --g-400:#5B6067; --g-500:#868B92; --g-600:#A6ABB1; --g-700:#C3C7CB;
-  --g-800:#DFE1E3; --g-900:#EDEDEA;
-  --accent:#FF6A4D; --accent-2:#FF8569; --accent-soft:#33170F;
-  --warm:#d79b52; --warm-soft:#2A2318;
-  --btn-bg:var(--g-900); --btn-ink:#131416;
+  --g-050:#10141C; --g-100:#171D28; --g-200:#252D3C; --g-300:#354053;
+  --g-400:#525E75; --g-500:#8290A8; --g-600:#A5B1C4;
+  --g-700:#C3CBD8; --g-800:#DDE3EB; --g-900:#E9EDF3;
+  --accent:#7FB0EC; --accent-2:#9CC5F4; --accent-soft:#16253C;
+  --warm:#D2A264; --warm-soft:#261E12;
+  --btn-bg:var(--g-900); --btn-ink:#10141C;
   --shadow-sm:0 1px 2px rgba(0,0,0,.5);
   --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 26px -18px rgba(0,0,0,.9);
 }
