@@ -182,8 +182,12 @@ ol.steps p{margin:0;color:var(--ink-2)}
   transform:rotate(-45deg)}
 
 /* ---------- misc ---------- */
-.callout{background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 28%,transparent);
-  border-radius:6px;padding:20px 24px;margin:24px 0}
+/* Plain panel, square corners, no coloured strip. Filling this with
+   accent-soft turned the guarantee — the most reassuring thing on the page —
+   into what reads as an error banner; a coloured left-border strip is itself
+   a named AI-design tell. The bold lead line carries it instead. */
+.callout{background:var(--panel);border:1px solid var(--line);
+  border-radius:0;padding:26px 28px;margin:26px 0}
 .callout.warm{background:var(--warm-soft);border-color:color-mix(in srgb,var(--warm) 32%,transparent)}
 .callout p:last-child{margin-bottom:0}
 .tw{border:1px solid var(--line);border-radius:6px;background:var(--panel);overflow-x:auto}
