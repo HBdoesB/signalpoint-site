@@ -1,34 +1,53 @@
 :root{
-  --ink:#141917; --ink-2:#414b48; --ink-3:#6b7a75;
-  --ground:#fbfaf7; --panel:#ffffff; --line:#e3ded4; --line-soft:#eeeae1;
-  --accent:#0f6b5c; --accent-2:#0b5348; --accent-soft:#e4f0ec;
-  --warm:#8a4d10; --warm-soft:#fbf1e3;
-  --shadow-sm:0 1px 2px rgba(20,25,23,.04), 0 1px 3px rgba(20,25,23,.06);
-  --shadow:0 2px 4px rgba(20,25,23,.04), 0 12px 32px -18px rgba(20,25,23,.30);
+  /* Palette rebuilt 17 Sep 2026. The previous one — warm cream ground #fbfaf7
+     with a muted green accent #0f6b5c — is now the documented default look of
+     AI-generated design in 2026. Cream + sage is the tell, not the fonts.
+     This is cool paper, a real grey ramp, and ONE unreasonable colour used
+     heavily rather than sparingly (the Roots of Progress / Pentagram move).
+     Buttons take the ink fill, not the signal fill, so contrast is never
+     marginal. */
+  --g-050:#F4F4F1; --g-100:#EAEAE5; --g-200:#DCDCD6; --g-300:#C4C4BD;
+  --g-400:#9B9B94; --g-500:#7C8087; --g-600:#5A5D63; --g-700:#3C3F45;
+  --g-800:#26282C; --g-900:#16171A;
+
+  --ink:var(--g-900); --ink-2:var(--g-700); --ink-3:var(--g-500);
+  --ground:var(--g-050); --panel:var(--g-100);
+  --line:var(--g-200); --line-soft:var(--g-100);
+
+  /* the signal: one colour, used a lot. it means "named in the answer". */
+  --accent:#C9331A; --accent-2:#A5250F; --accent-soft:#F7E2DD;
+  --warm:#8a4d10; --warm-soft:#F2EDE4;
+
+  --btn-bg:var(--ink); --btn-ink:var(--g-050);
+  --shadow-sm:0 1px 2px rgba(22,23,26,.05);
+  --shadow:0 1px 2px rgba(22,23,26,.05), 0 10px 26px -18px rgba(22,23,26,.35);
   --max:1080px;
-  --btn-ink:#fff;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --ink:#eceae4; --ink-2:#b6bfbb; --ink-3:#7f8c88;
-    --ground:#0e110f; --panel:#151916; --line:#2b322e; --line-soft:#222722;
-    --accent:#5fc8b0; --accent-2:#7ad8c2; --accent-soft:#16302b;
-    --warm:#d79b52; --warm-soft:#2d2314;
-    --btn-ink:#0e110f;
-    --shadow-sm:0 1px 2px rgba(0,0,0,.4);
-    --shadow:0 2px 4px rgba(0,0,0,.4), 0 12px 32px -18px rgba(0,0,0,.9);
+    --g-050:#131416; --g-100:#1B1D20; --g-200:#2A2D31; --g-300:#3C4046;
+    --g-400:#5B6067; --g-500:#868B92; --g-600:#A6ABB1; --g-700:#C3C7CB;
+    --g-800:#DFE1E3; --g-900:#EDEDEA;
+    --accent:#FF6A4D; --accent-2:#FF8569; --accent-soft:#33170F;
+    --warm:#d79b52; --warm-soft:#2A2318;
+    --btn-bg:var(--g-900); --btn-ink:#131416;
+    --shadow-sm:0 1px 2px rgba(0,0,0,.5);
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 26px -18px rgba(0,0,0,.9);
   }
 }
 :root[data-theme="dark"]{
-  --ink:#eceae4; --ink-2:#b6bfbb; --ink-3:#7f8c88;
-  --ground:#0e110f; --panel:#151916; --line:#2b322e; --line-soft:#222722;
-  --accent:#5fc8b0; --accent-2:#7ad8c2; --accent-soft:#16302b;
-  --warm:#d79b52; --warm-soft:#2d2314;
-  --btn-ink:#0e110f;
-  --shadow-sm:0 1px 2px rgba(0,0,0,.4);
-  --shadow:0 2px 4px rgba(0,0,0,.4), 0 12px 32px -18px rgba(0,0,0,.9);
+  --g-050:#131416; --g-100:#1B1D20; --g-200:#2A2D31; --g-300:#3C4046;
+  --g-400:#5B6067; --g-500:#868B92; --g-600:#A6ABB1; --g-700:#C3C7CB;
+  --g-800:#DFE1E3; --g-900:#EDEDEA;
+  --accent:#FF6A4D; --accent-2:#FF8569; --accent-soft:#33170F;
+  --warm:#d79b52; --warm-soft:#2A2318;
+  --btn-bg:var(--g-900); --btn-ink:#131416;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.5);
+  --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 26px -18px rgba(0,0,0,.9);
 }
 *{box-sizing:border-box}
+/* tabular, lining figures everywhere — this is a measurement business */
+table,.n,.price,.hs-fig,.dotkey,time{font-variant-numeric:tabular-nums lining-nums}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--ground);color:var(--ink);
   font-family:"Public Sans",ui-sans-serif,system-ui,-apple-system,sans-serif;
@@ -51,9 +70,9 @@ img{max-width:100%}
 
 .nav-links a{color:var(--ink-2);font-size:14px;font-weight:500}
 .nav-links a:hover{color:var(--ink);text-decoration:none}
-.btn{display:inline-block;background:var(--accent);color:var(--btn-ink);padding:9px 17px;
-  border-radius:4px;font-weight:600;font-size:14px;border:1px solid var(--accent)}
-.btn:hover{background:var(--accent-2);text-decoration:none;color:var(--btn-ink)}
+.btn{display:inline-block;background:var(--btn-bg);color:var(--btn-ink);padding:9px 17px;
+  border-radius:4px;font-weight:600;font-size:14px;border:1px solid var(--btn-bg)}
+.btn:hover{background:var(--g-700);text-decoration:none;color:var(--btn-ink)}
 /* `.nav-links a` is specificity 0-1-1 and outranks `.btn` at 0-1-0, so without
    this line the header CTA renders in --ink-2 on the accent fill: 1.41:1 in
    light, 1.08:1 in dark. It is the only nav element on mobile. Do not remove. */
@@ -218,3 +237,54 @@ footer{border-top:1px solid var(--line);background:var(--panel);margin-top:20px}
 .tight-list{padding-left:19px;margin:14px 0 4px;max-width:66ch}
 .tight-list li{margin-bottom:8px;color:var(--ink-2)}
 .tight-list li strong{color:var(--ink)}
+
+/* ---------- structure: breaking the single-container rhythm ----------
+   Every section used to sit in the same 1080px centred box with identical
+   padding. That uniform accordion is the strongest "template" signal a page
+   can give. These let content escape the measure. */
+.bleed{width:100%;padding:0}
+.bleed-in{max-width:1400px;margin:0 auto;padding:0 26px}
+
+/* ---------- the dot field: 79 brands, 44 of them invisible ----------
+   A measurement company showing no measurement was the other structural gap.
+   Each dot is one real brand from the published study. */
+.dotfield{display:grid;grid-template-columns:repeat(auto-fill,minmax(19px,1fr));
+  gap:7px;margin:30px 0 0;max-width:820px}
+.dot{aspect-ratio:1;border-radius:50%;background:var(--g-300)}
+.dot.named{background:var(--accent)}
+.dotkey{display:flex;gap:26px;flex-wrap:wrap;margin-top:22px;
+  font-size:13px;color:var(--ink-2)}
+.dotkey span{display:flex;align-items:center;gap:8px}
+.dotkey i{width:11px;height:11px;border-radius:50%;background:var(--g-300);flex:none}
+.dotkey i.named{background:var(--accent)}
+
+/* ---------- the dense band ----------
+   Deliberate density variation: a tight index of real questions set small,
+   immediately after a near-empty statement. */
+.dense{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12.5px;
+  line-height:1.85;color:var(--ink-2);columns:3;column-gap:38px;margin-top:26px}
+.dense li{break-inside:avoid;list-style:none;padding-left:0}
+.dense ul{margin:0;padding:0}
+@media (max-width:860px){ .dense{columns:2} }
+@media (max-width:560px){ .dense{columns:1} }
+
+/* ---------- the two tiers ---------- */
+.tiers{display:grid;grid-template-columns:1fr;gap:0;margin-top:34px;
+  border:1px solid var(--line)}
+@media (min-width:820px){ .tiers{grid-template-columns:1fr 1fr} }
+.tier{padding:32px 30px 34px}
+.tier + .tier{border-top:1px solid var(--line)}
+@media (min-width:820px){ .tier + .tier{border-top:none;border-left:1px solid var(--line)} }
+.tier.lead{background:var(--panel)}
+.tier .who{font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);font-weight:600;margin:0 0 10px}
+.tier h3{margin:0 0 4px;font-size:22px}
+.tier .price{font-family:Fraunces,Georgia,serif;font-size:36px;font-weight:600;
+  letter-spacing:-.02em;margin:8px 0 2px}
+.tier .price span{font-family:"Public Sans",sans-serif;font-size:14px;
+  font-weight:400;color:var(--ink-3);letter-spacing:0}
+.tier ul{list-style:none;padding:0;margin:20px 0 24px}
+.tier li{position:relative;padding-left:20px;margin-bottom:9px;font-size:15px;
+  color:var(--ink-2)}
+.tier li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;
+  border-radius:50%;background:var(--accent)}
