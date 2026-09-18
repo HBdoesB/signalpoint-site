@@ -322,6 +322,12 @@
     <form class="checkform" action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="299442f8-bbf4-4175-90da-35e38b203add">
       <input type="hidden" name="subject" value="Signalpoint — free check request">
+      <!-- Second recipient. A friend filled this in and no notification arrived;
+           a single delivery path for our only inbound channel is one spam filter
+           away from losing every lead silently. -->
+      <input type="hidden" name="ccemail" value="hardikbeniwal74@gmail.com">
+      <input type="hidden" name="from_name" value="Signalpoint website">
+      <input type="hidden" name="replyto" value="email">
       <input type="hidden" name="redirect" value="https://signalpoint.in/thanks.html">
       <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true">
       <div class="row">
